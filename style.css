@@ -1,0 +1,84 @@
+.container {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  margin: 200px auto;
+  position: relative;
+  display: flex;
+  border-radius: 0px 0px 10px 10px;
+
+  box-shadow:
+    0 0 20px 10px rgba(255, 215, 0, 0.2),
+    /* glow */
+    0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+}
+
+.box0 {
+  width: 400px;
+  height: 50px;
+  background-color: gold;
+  border-radius: 10px 10px 0px 0px;
+  transform: translateY(-10px);
+
+  transition: transform 0.8s ease;
+  transform-origin: top left;
+}
+
+.container:hover .box0 {
+  transform: rotate(-90deg);
+}
+
+.verticalribbon {
+  height: 400px;
+  width: 30px;
+  background-color: gold;
+  /* margin-left: 180px; */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.horizontalribbon {
+  height: 30px;
+  width: 400px;
+  background-color: gold;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  /* transform: rotate(90deg); */
+
+}
+
+
+.card {
+  width: 190px;
+  height: 80px;
+  /* background-color: rgb(255, 255, 255); */
+  border-radius: 10px;
+  text-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translateX(-50%) rotateX(-90deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+
+}
+
+/* Show card on hover */
+.container:hover .card {
+  transform: translateX(-50%);
+  opacity: 1;
+
+}
